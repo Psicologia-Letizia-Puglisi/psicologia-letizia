@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, HeadFC, PageProps } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import { ParallaxProvider } from "react-scroll-parallax"
 import NavBar from "../components/molecules/NavBar"
 import Hero from "../components/molecules/Hero"
