@@ -65,10 +65,10 @@ const Hero = ({
           </a>
         ) : (
           <div className="space-y-2">
-            <h2 className="text-[1.6rem] md:text-[2.8rem] font-serif italic leading-none">
+            <h2 className={`${image ? 'text-[1.6rem] md:text-[2.8rem]' : 'text-[1.4rem] md:text-[2.4rem]'} font-serif italic leading-none`}>
               {ContactsName}
             </h2>
-            <p className="text-[1.2rem] md:text-[2.2rem] font-light tracking-wide opacity-90">
+            <p className={`${image ? 'text-[1.2rem] md:text-[2.2rem]' : 'text-[1rem] md:text-[1.8rem]'} font-light tracking-wide opacity-90`}>
               {ContactsJobTitle}
             </p>
           </div>
