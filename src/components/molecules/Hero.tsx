@@ -15,10 +15,10 @@ const Hero = ({
 }) => {
 
   return (
-    <main className="relative w-full h-[90vh] md:h-screen flex items-center justify-center bg-primary text-white overflow-hidden">
+    <main className={`${image ? 'h-[90vh] md:h-screen' : 'py-20'} relative w-full flex items-center justify-center bg-primary text-white overflow-hidden`}>
 
       {/* BACKGROUND LAYER: Parallax Image or Full-height fallback */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className={`absolute inset-0 w-full h-full`}>
         {image ? (
           <Parallax speed={-20} className="w-full h-full">
             <div className="w-full h-full object-cover">
@@ -41,9 +41,9 @@ const Hero = ({
       </div>
 
       {/* CENTERED RECTANGLE BANNER UI (Only visible if no image) */}
-      {!image && (
+      {/* {!image && (
         <div className="absolute z-10 w-full md:w-3/4 lg:w-2/3 h-[40vh] md:h-[50vh] bg-white/5 backdrop-blur-sm border-y md:border-x border-white/10 shadow-2xl" />
-      )}
+      )} */}
 
       {/* CONTENT LAYER */}
       <div
@@ -75,8 +75,6 @@ const Hero = ({
         )}
       </div>
 
-      {/* BOTTOM DECORATION: Subtle scroll indicator line */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[1px] h-16 bg-gradient-to-b from-white/50 to-transparent z-20" />
     </main>
   )
 }

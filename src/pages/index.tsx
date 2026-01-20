@@ -44,7 +44,6 @@ export const Head = () => {
     <Seo
       title={"Psicologia Letizia Puglisi"}
       pathname="/"
-      description={""}
       structuredData
 
     />

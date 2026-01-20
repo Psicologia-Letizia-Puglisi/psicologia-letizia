@@ -39,9 +39,8 @@ export const Head = () => {
 
   return (
     <Seo
-      title={"Psicologia Letizia Puglisi"}
-      pathname="/"
-      description={""}
+      title={"Psicologia Letizia Puglisi - Servizi"}
+      pathname="/servizi"
       structuredData
 
     />

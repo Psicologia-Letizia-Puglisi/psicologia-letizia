@@ -7,7 +7,7 @@ import { TransAnalysisBook, TransAnalysisInfo, TransAnalysisTitle } from '../../
 const TransAnalysis = () => {
 
   return (
-    <Section id="analisitransazionale" title={TransAnalysisTitle}>
+    <Section id="analisitransazionale">
       <div className="w-full flex flex-row flex-wrap items-center justify-center gap-24">
         {TransAnalysisInfo.map((card, idx) => (
           <TransAnalysisCard key={idx} title={card.title} content={card.content} />

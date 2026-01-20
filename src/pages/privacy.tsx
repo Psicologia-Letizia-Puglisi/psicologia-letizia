@@ -5,6 +5,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import Footer from "../components/molecules/Footer";
 import NavBar from "../components/molecules/NavBar";
 import { email } from "../utilities/siteInfo";
+import Seo from "../components/atoms/Seo";
 
 const PrivacyPage: React.FC<PageProps> = () => {
   return (
@@ -84,3 +85,15 @@ const PrivacyPage: React.FC<PageProps> = () => {
 };
 
 export default PrivacyPage;
+
+export const Head = () => {
+
+  return (
+    <Seo
+      title={"Psicologia Letizia Puglisi - Privacy Policy"}
+      pathname="/privacy"
+      structuredData
+
+    />
+  );
+};

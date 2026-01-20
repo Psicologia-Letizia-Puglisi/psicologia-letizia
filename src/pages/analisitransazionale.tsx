@@ -6,6 +6,7 @@ import Hero from '../components/molecules/Hero'
 import NavBar from '../components/molecules/NavBar'
 import { StaticImage } from 'gatsby-plugin-image'
 import { TransAnalysisTitle } from '../utilities/siteInfo'
+import Seo from '../components/atoms/Seo'
 
 const AnalisiTransazionale = () => {
   const image = (
@@ -31,3 +32,13 @@ const AnalisiTransazionale = () => {
 }
 
 export default AnalisiTransazionale
+
+export const Head = () => {
+  return (
+    <Seo
+      title={"Psicologia Letizia Puglisi - Analisi Transazionale"}
+      pathname="/analisitransazionale"
+      structuredData
+    />
+  );
+}
