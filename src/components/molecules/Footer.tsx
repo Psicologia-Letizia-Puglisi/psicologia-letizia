@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='w-full pt-36 pb-4 bg-lightBlue' id='contatti'>
       <div className='w-full max-w-6xl items-center mx-auto mb-8'>
         <h3 className="text-2xl md:text-4xl font-bold mb-12 text-center text-white uppercase">Contatti</h3>
-        <div className="w-full text-lg max-w-[80%] mx-auto px-4 flex flex-col md:flex-row justify-evenly items-start md:items-center gap-4">
+        <div className="w-full text-base sm:text-lg max-w-[90%] md:max-w-[80%] mx-auto px-4 flex flex-col md:flex-row justify-evenly items-start md:items-center gap-4">
           <div className="text-white text-left gap-2 flex flex-col">
             <p className="italic font-bold">{ContactsName}</p>
             <p className="italic">{ContactsInfo1}</p>
