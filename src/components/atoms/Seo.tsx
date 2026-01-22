@@ -1,6 +1,7 @@
 import React from 'react';
 import { Script } from 'gatsby';
 import useSiteMetadata from '../../utilities/useSiteMetadata';
+import { ContactsName, phoneNumber } from '../../utilities/siteInfo';
 
 // Types
 
@@ -70,6 +71,29 @@ const Seo = ({
     keywords: keywords || metadata.keywords,
   };
 
+  const psychologistSchema = {
+    // Or 'Physician'
+    '@id': `${metadata.siteUrl}#psychologist`,
+    name: ContactsName,
+    url: metadata.siteUrl,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Piazza Cavour, 14, Palazzo Porto Sollima',
+      addressLocality: 'Catania',
+      postalCode: '95124',
+      addressCountry: 'IT',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 37.5167,
+      longitude: 15.0828,
+    },
+    telephone: phoneNumber,
+    image: metadata.siteUrl + seo.image.images.fallback.src,
+    priceRange: '€€',
+    areaServed: ['Catania', 'Online'],
+  };
+
   const microData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -82,6 +106,7 @@ const Seo = ({
         image: [metadata.siteUrl + seo.image.images.fallback.src, ...images.map((image) => metadata.siteUrl + image)],
         inLanguage: 'IT',
       },
+      psychologistSchema
     ],
   };
 
@@ -111,6 +136,11 @@ const Seo = ({
       <meta name="twitter:image" content={metadata.siteUrl + seo.image.images.fallback.src} />
 
       <meta name="robots" content="max-image-preview:large" />
+
+      <meta name="geo.region" content="IT-CT" />
+      <meta name="geo.placename" content="Catania" />
+      <meta name="geo.position" content="37.5167;15.0828" />
+      <meta name="ICBM" content="37.5167, 15.0828" />
 
       {structuredData ? <Script type="application/ld+json">{JSON.stringify(microData)}</Script> : <></>}
       {noIndex ? <meta name="robots" content="noindex,nofollow" /> : <></>}
