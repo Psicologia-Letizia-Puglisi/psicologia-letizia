@@ -13,7 +13,7 @@ const TransAnalysis = () => {
           <TransAnalysisCard key={idx} title={card.title} content={card.content} />
         ))}
         <TransAnalysisCard
-          title="Contatta lo studio"
+          title="Prenota un appuntamento"
           // noShadow
           content={
             <div className="flex flex-col items-center">
@@ -21,7 +21,7 @@ const TransAnalysis = () => {
                 {TransAnalysisBook}
               </span>
 
-              <Book />
+              <Book text="Contatta lo studio" />
             </div>
           }
         />

@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { BookText, email, filteredNumber } from '../../utilities/siteInfo';
 
-const Book = () => {
+const Book = ({ text }: { text?: string }) => {
   const [hovered, setHovered] = useState(false);
   const [supportsHover, setSupportsHover] = useState(false);
 
@@ -29,8 +29,8 @@ const Book = () => {
       onMouseEnter={supportsHover ? () => setHovered(true) : undefined}
       onMouseLeave={supportsHover ? () => setHovered(false) : undefined}
     >
-      <a title="Prenota una consulenza" href="#contatti" className="inline-block p-3 text-center">
-        {BookText}
+      <a title={text || BookText} href="#contatti" className="inline-block p-3 text-center">
+        {text || BookText}
       </a>
       <span
         className={`inline-flex items-center ml-3 origin-left transform overflow-hidden transition-[max-width,opacity,transform] duration-300 ${(supportsHover && hovered) ? 'max-w-[96px] opacity-100 scale-100' : 'max-w-0 opacity-0 scale-0 pointer-events-none'}`}
