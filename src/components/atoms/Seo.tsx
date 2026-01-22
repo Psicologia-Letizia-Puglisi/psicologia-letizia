@@ -72,7 +72,7 @@ const Seo = ({
   };
 
   const psychologistSchema = {
-    // Or 'Physician'
+    '@type': 'MedicalBusiness',
     '@id': `${metadata.siteUrl}#psychologist`,
     name: ContactsName,
     url: metadata.siteUrl,
