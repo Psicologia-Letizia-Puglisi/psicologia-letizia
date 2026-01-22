@@ -166,7 +166,7 @@ export type ServiceBlockProps = {
 
 /* ANALISI TRANSAZIONALE */
 export const TransAnalysisTitle = "Analisi Transazionale"
-export const TransAnalysisBook = "Per fissare una prima visita o richiedere informazioni, contatta la dottoressa."
+export const TransAnalysisBook = "Per fissare una prima visita o richiedere informazioni, contatta lo studio."
 export const TransAnalysisInfo = [
   {
     title: "Cos'è l'Analisi Transazionale?",

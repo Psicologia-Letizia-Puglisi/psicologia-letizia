@@ -21,7 +21,7 @@ const TransAnalysis = () => {
                 {TransAnalysisBook}
               </span>
 
-              <Book text="Contatta lo studio" />
+              <Book />
             </div>
           }
         />
