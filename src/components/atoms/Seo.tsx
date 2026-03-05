@@ -1,7 +1,7 @@
 import React from 'react';
 import { Script } from 'gatsby';
 import useSiteMetadata from '../../utilities/useSiteMetadata';
-import { ContactsName, phoneNumber } from '../../utilities/siteInfo';
+import { ContactsLocations, ContactsName, phoneNumber } from '../../utilities/siteInfo';
 
 // Types
 
@@ -73,16 +73,16 @@ const Seo = ({
 
   const psychologistSchema = {
     '@type': 'MedicalBusiness',
-    '@id': `${metadata.siteUrl}#psychologist`,
+    '@id': `${metadata.siteUrl}#sudime`,
     name: ContactsName,
     url: metadata.siteUrl,
-    address: {
+    address: ContactsLocations.filter(location => location.streetAddress).map(location => ({
       '@type': 'PostalAddress',
-      streetAddress: 'Piazza Cavour, 14, Palazzo Porto Sollima',
-      addressLocality: 'Catania',
-      postalCode: '95124',
-      addressCountry: 'IT',
-    },
+      streetAddress: location.streetAddress,
+      addressLocality: location.addressLocality,
+      postalCode: location.postalCode,
+      addressCountry: location.addressCountry,
+    })),
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 37.5167,
@@ -90,8 +90,8 @@ const Seo = ({
     },
     telephone: phoneNumber,
     image: metadata.siteUrl + seo.image.images.fallback.src,
-    priceRange: '€€',
-    areaServed: ['Catania', 'Online'],
+    priceRange: '€',
+    areaServed: ContactsLocations.map(location => location.addressLocality),
   };
 
   const microData = {

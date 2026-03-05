@@ -9,7 +9,7 @@ const Footer = () => {
       <div className='max-w-6xl mx-auto px-6'>
         {/* SECTION TITLE */}
         <div className="flex flex-col items-center mb-16">
-          <h3 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-wider">Contatti</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider">Contatti</h3>
           <div className="w-24 h-1 bg-green mt-4 rounded-full"></div>
         </div>
 
