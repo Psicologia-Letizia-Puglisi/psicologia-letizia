@@ -19,7 +19,7 @@ export const AboutMeText = <>
   Sono <Highlight>Specialista in Psicoterapia</Highlight> a indirizzo Analitico Transazionale.
   <br /><br />
 
-  Ho conseguito la <Highlight>laurea</Highlight> magistrale in <Highlight>Psicologia Clinica</Highlight> con lode presso l'Università degli Studi di Padova e, dopo l'abilitazione alla professione, la <Highlight>Specializzazione in Psicoterapia</Highlight> col massimo dei voti presso la Scuola di Specializzazione PerFormat, affiliata alla European Association Transactional Analysis (EATA).
+  Ho conseguito la <Highlight>laurea</Highlight> magistrale in <Highlight>Psicologia Clinica</Highlight> con lode presso l'Università degli Studi di Padova e, dopo l'abilitazione alla professione, la <Highlight>Specializzazione in Psicoterapia</Highlight> col massimo dei voti presso la Scuola di Specializzazione PerFormat, affiliata alla European Association Transactional Analysis (EATA). Ho perfezionato la diagnostica clinica e strumentale avanzata con il <Highlight>Master</Highlight> di II livello in <Highlight>Psicodiagnostica Clinica, Forense e Medico-legale</Highlight> presso l’Università Sapienza di Roma.
   <br /><br />
 
   Nel corso della mia formazione universitaria e specialistica ho maturato significativa <Highlight>esperienza clinica</Highlight> presso i <Highlight>Servizi di Psicologia</Highlight>, occupandomi di valutazione e trattamento anche in contesti ad elevata complessità.
@@ -225,7 +225,36 @@ export const ContactsName = 'Dott.ssa Letizia Puglisi'
 export const ContactsJobTitle = 'Psicoterapeuta'
 export const ContactsInfo1 = 'Ordine degli Psicologi n. 10702'
 export const ContactsInfo2 = 'Partita IVA: 06074890879'
-export const ContactsAddress = <><b>Dove ricevo:</b> Piazza Cavour, 14, Palazzo Porto Sollima, Catania e online</>
+export const ContactsLocations = [
+  {
+    id: 'catania',
+    addressLocality: 'Catania',
+    streetAddress: 'Piazza Cavour, 14, Palazzo Porto Sollima',
+    postalCode: '95125',
+    addressCountry: 'IT',
+    mapsUrl: 'https://maps.google.com/?q=Piazza+Cavour+14+Catania',
+  },
+  {
+    id: 'viagrande',
+    addressLocality: 'Viagrande',
+    streetAddress: 'Via Umberto, 56, Studio multidisciplinare LOTUS',
+    postalCode: '95029',
+    addressCountry: 'IT',
+    mapsUrl: 'https://maps.google.com/?q=Via+Umberto+56+Viagrande',
+  },
+  {
+    id: 'online',
+    addressLocality: 'Online',
+  },
+] as {
+  id: string;
+  addressLocality: string;
+  streetAddress?: string;
+  postalCode?: string;
+  addressCountry?: string;
+  mapsUrl?: string;
+}[]
+
 export const ContactsCopyrightText = 'Questo sito internet rispetta la linea guida nazionale del CNOP in materia di pubblicità sanitaria, secondo gli artt. 39-40 del Codice Deontologico degli Psicologi.'
 
 export const phoneNumber = '+39 3475777357'
