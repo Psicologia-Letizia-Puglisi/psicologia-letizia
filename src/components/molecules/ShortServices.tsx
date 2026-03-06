@@ -24,7 +24,7 @@ const ShortServices: React.FC = () => {
               >
                 {/* Layered Background Effect */}
                 <div className="absolute inset-0 bg-purple/5 rounded-2xl transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105 -z-10" />
-                <div className="absolute inset-0 border border-purple/10 rounded-2xl -z-5" />
+                <div className="absolute inset-0 border-2 border-purple/10 rounded-2xl -z-5" />
 
                 <div className="flex flex-col items-center text-center h-full">
                   {/* Icon/Image Container with floating effect */}
@@ -36,7 +36,7 @@ const ShortServices: React.FC = () => {
                   </div>
 
                   {/* Title with decorative element */}
-                  <h4 className="text-xl md:text-2xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-purple">
+                  <h4 className="text-xl md:text-2xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-lightBlue">
                     {s.title}
                   </h4>
 
